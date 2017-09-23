@@ -1,0 +1,15 @@
+html {
+  height: 100%;
+
+  body, #reactRoot, .app-wrapper {
+    font-family: '#{$font-family}';
+    margin: auto;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    a {
+      text-decoration: none !important;
+    }
+  }
+
+}

@@ -1,0 +1,135 @@
+// Override font awesome vars in
+// ./fontawesome/_variables.scss
+$fa-font-path:        "../../fonts/fontawesome";
+
+// Override Bootstrap vars in
+// ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables
+
+/**
+ * base layout
+ */
+$font-family:             'Proxima Nova Regular';
+$font-size-base:          $zigvy-fs-regular;
+$font-size-large:         $zigvy-fs-large;
+$font-size-small:         $zigvy-fs-small;
+
+$headings-font-weight:    $zigvy-fw-bold;
+$btn-font-weight:         initial;
+$alert-link-font-weight:  $zigvy-fw-bold;
+$badge-font-weight:       $zigvy-fw-bold;
+$close-font-weight:       $zigvy-fw-bold;
+
+/**
+ * Screen size
+ */
+$screen-xs:                  480px;
+$screen-sm:                  768px;
+$screen-md:                  992px;
+$screen-lg:                  1200px;
+
+/**
+ * Grid & Column size
+ */
+$right-column-width:    340px;
+
+
+/**
+ * base colors
+ */
+$brand-primary:         $zigvy-col-brand;
+//$brand-success:         $zigvy-col-success;
+//$brand-info:            $zigvy-col-info;
+//$brand-warning:         $zigvy-col-warning;
+//$brand-danger:          $zigvy-col-danger;
+
+$logo-color:            $zigvy-col-brand;
+
+//$body-bg:               $zigvy-col-light;
+//$text-color:            $zigvy-col-dark;
+//$text-color-grey:       $zigvy-col-grey;
+
+$link-color:            $zigvy-col-brand;
+//$link-hover-color:      $zigvy-col-dark;
+$link-hover-decoration: none;
+
+//$gray-base:              $zigvy-col-regular;
+//$gray-darker:            lighten($zigvy-col-regular, 13.5%);
+//$gray-dark:              $zigvy-col-loud;
+//$gray:                   $zigvy-col-regular;
+//$gray-light:             $zigvy-col-quiet;
+//$gray-lighter:           lighten($zigvy-col-regular, 93.5%);
+
+/**
+ * navbar
+ */
+//$navbar-default-color:                     $zigvy-col-dark;
+//$navbar-default-bg:                        rgba($zigvy-col-light, .95);
+//$navbar-default-bg:                        $zigvy-col-light;
+$navbar-default-border:                    none;
+
+//$navbar-default-link-color:                $link-color;
+//$navbar-default-link-hover-color:          $link-hover-color;
+//$navbar-default-link-active-color:         $link-hover-color;
+
+$navbar-height:                            45px;
+
+
+
+/**
+ * forms
+ */
+//$input-bg:                       $zigvy-col-light;
+//$input-border:                   $zigvy-col-light-grey;
+//$input-border-focus:             $zigvy-col-active;
+//$input-group-addon-bg:           $zigvy-col-regular;
+//$input-group-addon-border-color: $zigvy-col-regular;
+//$input-color:                    $zigvy-col-dark;
+//$input-color-placeholder:        lighten($zigvy-col-loud, 10%);
+//
+//$input-bg-disabled:              $gray;
+$input-border-radius:            4px;
+// $input-border-radius-large:      $border-radius-large !default;
+// $input-border-radius-small:      $border-radius-small !default;
+// $input-color-placeholder:        #999 !default;
+// $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+// $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+// $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
+/**
+* Button
+ */
+$btn-primary-bg:                  #06b5ab;
+$btn-primary-border:              #06b5ab;
+$btn-border-radius-base:          3px;
+
+//$btn-primary-color:               $zigvy-col-light;
+$btn-default-color:               $zigvy-col-dark;
+//$btn-default-bg:                  $zigvy-col-transparent;
+$btn-default-border:              $zigvy-col-brand;
+/**
+ * alerts
+ */
+//$state-success-text:             $brand-success;
+//$state-success-bg:               $brand-success;
+//$state-danger-text:              $brand-danger;
+//$state-danger-bg:                $brand-danger;
+//$state-info-text:                $brand-info;
+//$state-info-bg:                  $brand-info;
+//$state-warning-text:             $brand-warning;
+//$state-warning-bg:               $brand-warning;
+
+/**
+ * page
+ */
+$page-content-padding:           15px;
+//$page-content-bg-col:            $zigvy-col-extra-light-grey;
+
+/**
+ * Dashboard page
+ */
+$adm-dashboard-ht:               115px;
+
+/**
+ * Font-size
+ */
+$font-default-icon-navbar:              14px;

@@ -1,0 +1,23 @@
+.top-nav-bar{
+
+  &__nav-item{
+    display: inline-block;
+    line-height: 39px;
+    font-weight: 300;
+    max-width: 140px;
+    font-size: 14px;
+    color: white;
+
+    &--left{
+      float: left;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: left;
+    }
+
+    &--right{
+      text-align: right;
+      float: right;
+    }
+  }
+}

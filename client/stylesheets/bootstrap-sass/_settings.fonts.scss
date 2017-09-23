@@ -1,0 +1,151 @@
+// font sizes
+$zigvy-fs-icon-small: 7px;
+$zigvy-fs-very-tiny: 8px;
+$zigvy-fs-tiny: 10px;
+$zigvy-fs-x-tiny: 11px;
+$zigvy-fs-small: 12px;
+$zigvy-fs-regular: 13px;
+$zigvy-fs-large: 14px;
+$zigvy-fs-x-large: 16px;
+$zigvy-fs-xx-large: 23px;
+$zigvy-fs-xxx-large: 30px;
+$zigvy-fs-4xl-large: 35px;
+
+// font weights
+$zigvy-fw-normal: light; // 300
+$zigvy-fw-bold: bold; // 700, but we use fira sans medium @ 500
+
+// font family
+$zigvy-font-bold: "Proxima Nova Bold";
+
+// font name
+$zigvy-font-path:          '/fonts/proximaNova';
+
+@font-face {
+  font-family: 'Proxima Nova Black';
+  src: url('#{$zigvy-font-path}/ProximaNovaBlack.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Black Italic';
+  src: url('#{$zigvy-font-path}/ProximaNovaBlackItalic.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('#{$zigvy-font-path}/ProximaNovaBold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold Italic';
+  src: url('#{$zigvy-font-path}/ProximaNovaBoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Extra Bold';
+  src: url('#{$zigvy-font-path}/ProximaNovaExtraBold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Extra Bold Italic';
+  src: url('#{$zigvy-font-path}/ProximaNovaExtraBoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('#{$zigvy-font-path}/ProximaNovaLight.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light Italic';
+  src: url('#{$zigvy-font-path}/ProximaNovaLightItalic.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url('#{$zigvy-font-path}/ProximaNovaRegular.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Regular Italic';
+  src: url('#{$zigvy-font-path}/ProximaNovaRegularItalic.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url('#{$zigvy-font-path}/ProximaNovaSemibold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Semibold Italic';
+  src: url('#{$zigvy-font-path}/ProximaNovaSemiboldItalic.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Thin';
+  src: url('#{$zigvy-font-path}/ProximaNovaThin.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Thin Italic';
+  src: url('#{$zigvy-font-path}/ProximaNovaThinItalic.otf');
+}
+
+/****************************************************************
+  FONTS DEFINITION BY CLASS
+****************************************************************/
+.font-black{
+  font-family: 'Proxima Nova Black';
+}
+
+.font-black-italic{
+  font-family: 'Proxima Nova Black Italic';
+}
+
+.font-bold{
+  font-family: 'Proxima Nova Bold';
+}
+
+.font-bold-italic{
+  font-family: 'Proxima Nova Bold Italic';
+}
+
+.font-bold-extra{
+  font-family: 'Proxima Nova Extra Bold';
+}
+
+.font-bold-extra-italic{
+  font-family: 'Proxima Nova Extra Bold Italic';
+}
+
+.font-light{
+  font-family: 'Proxima Nova Light';
+}
+
+.font-light-italic{
+  font-family: 'Proxima Nova Light Italic';
+}
+
+.font-regular{
+  font-family: 'Proxima Nova Regular';
+}
+
+.font-regular-italic{
+  font-family: 'Proxima Nova Regular Italic';
+}
+
+.font-semi-bold{
+  font-family: 'Proxima Nova Semibold';
+}
+
+.font-semi-bold-italic{
+  font-family: 'Proxima Nova Semibold Italic';
+}
+
+.font-thin{
+  font-family: 'Proxima Nova Thin';
+}
+
+.font-thin-italic{
+  font-family: 'Proxima Nova Thin Italic';
+}

@@ -1,0 +1,12 @@
+.btn{
+  font-family: 'Proxima Nova Bold';
+  text-transform: uppercase;
+
+  &--big{
+    padding: 10px 16px;
+  }
+
+  &--full-width{
+    width: 100%;
+  }
+}

@@ -1,0 +1,10 @@
+@mixin zigvy-transition($property, $duration, $timing: 'inOut') {
+  transition-property: $property;
+  transition-duration: $duration;
+
+  @if $timing == 'out' {
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); //easeOutQuart
+  } @else {
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); // easeInOutQuint
+  }
+}

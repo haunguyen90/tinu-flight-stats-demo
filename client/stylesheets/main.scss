@@ -1,0 +1,144 @@
+// ITCSS architecture
+//
+// inspired by:
+// - http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+// - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+
+// 1 SETTINGS
+//
+// =======================================================================
+//
+// This holds any global settings for your project. This layer should
+// only house settings that need to be accessed from anywhere. Examples
+// of global settings might be things like the base font size, colour
+// palettes, config (for example, $environment: dev;) and so on.
+//
+// Does not output any CSS
+// @import "{}/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+// @import "{}/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+@import "bootstrap-sass/settings.colors";
+@import "bootstrap-sass/settings.fonts";
+@import "bootstrap-sass/settings.vendor";
+@import "settings.reset";
+
+// 2 TOOLS
+//
+// =======================================================================
+//
+// The next layer houses your globally available tooling – namely mixins
+// and functions. Any mixin or function that does not need accessing
+// globally should belong in the partial to which it relates. The Tools
+// layer comes after the Settings layer because a mixin may require one
+// of the global settings as a default parameter. Examples of global tools
+// might be gradient mixins, font-sizing mixins and so on.
+//
+// Does not output any CSS
+
+@import "bootstrap-sass/tools.mixins.transitions";
+@import "bootstrap-sass/tools.mixins.general";
+//@import "bootstrap-sass/mixins.buttons";
+
+// 3 GENERIC
+//
+// =======================================================================
+//
+// The Generic layer is the first one that actually produces any CSS. It
+// houses very high-level, far reaching styles. This layer is seldom modified,
+// and is usually the same across any projects you work on.
+// It contains things like Normalize.css, global box-sizing rules, CSS resets
+// and so on. The Generic layer affects a lot of the DOM, hence it being nice
+// and wide in the Triangle model, and occurring very early on.
+
+// @import "generic.reset";
+// @import "generic.box-sizing";
+
+// 4 VENDOR
+//
+// =======================================================================
+//
+// This should be a suitable layer for your CSS framework of choice etc.
+// It is actually likely to include both generic stuff like resets and
+// element specific stuff.
+
+@import "bootstrap-sass/vendor.bootstrap";
+
+// 5 ELEMENTS
+//
+// =======================================================================
+//
+// These are bare, unclassed HTML elements. What does an h1 look like without
+// a class on it? What does an a look like without a class on it? The Elements
+// layer binds onto bare HTML element (or 'type') selectors only. It is still
+// a very low-specificity layer, but affects slightly less of the DOM, and is
+// slightly more opinionated, hence its location in the Triangle.
+//
+// The Elements layer is typically the last one in which we'd find bare,
+// element-based selectors, and is very rarely added to or changed after
+// initial setup. Once we have defined element-level styles, all additions
+// and deviations should be implemented using classes.
+//
+// .navbar {                  ->  .block {                    -> Block component
+//   &__item {                ->    &__element {              -> Element that depends upon the block
+//     &--active {}           ->      &--modifier {}          -> Modifier that changes the style of the block
+//   }                        ->    }
+// }                          ->  }
+
+@import "bootstrap-sass/elements.root";
+@import "bootstrap-sass/elements.links";
+@import "bootstrap-sass/elements.hr";
+@import "elements.form";
+@import "elements.buttons";
+// @import "elements.tables";
+
+// 6 OBJECTS
+//
+// =======================================================================
+//
+// This is the first layer in which we find class-based selectors. These are
+// concerned with styling non-cosmetic design patterns, or 'objects'. Objects
+// can range from something as simple as a .wrapper element, to layout systems,
+// through to things like the OOCSS poster child – the Media Object. This layer
+// affects less of the DOM than the last layer, has a higher specificity, and
+// is slightly more explicit in that we are now targeting sections of the DOM
+// with classes.
+
+//@import "bootstrap-sass/objects.layout";
+// @import "objects.animations";
+// @import "objects.media";
+// @import "objects.overlays";
+
+// 7 COMPONENTS
+//
+// =======================================================================
+//
+// The Components layer is where we begin to style recognisable pieces of UI.
+// We're still binding onto classes here, so our specificity hasn't yet increased.
+// However, this layer is more explicit than the last one in that we are now
+// styling explicit, designed pieces of the DOM.
+//
+// We shouldn't find any selectors with a lower specificity than one class in this layer.
+// This is where the majority of your work will happen after initial project set-up
+// and our UI components are often composed of Objects and Components
+
+// Core
+@import "{}/client/modules/core/stylesheets/components.mainLayout";
+@import "{}/client/modules/core/stylesheets/components.topNavBar";
+
+// Account
+
+// Notification
+
+
+// Global components
+
+// 8 TRUMPS
+//
+// =======================================================================
+//
+// This layer beats – or 'trumps' – all other layers, and has the power to override
+// anything at all that has gone before it. It is inelegant and heavy-handed, and
+// contains utility and hide helper classes, hacks and overrides.
+//
+// A lot of the declarations in this layer will carry !important
+
+// @import "trumps.clearfix";
