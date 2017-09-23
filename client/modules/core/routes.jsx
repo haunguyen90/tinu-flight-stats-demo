@@ -4,7 +4,8 @@ import { Router, Route, Switch } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 import ReactDOM from 'react-dom';
 
-import MainLayout from './components/MainLayout.jsx';
+import MainLayout from './components/MainLayout';
+import FlightPage from '../flight/components/FlightPage';
 
 export default function (injectDeps) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -16,7 +17,7 @@ export default function (injectDeps) {
         <Switch>
           <MainLayoutCtx>
             <Switch>
-              <Route path="/" exact render={() => <div>Home</div>} />
+              <Route path="/" exact component={FlightPage} />
             </Switch>
           </MainLayoutCtx>
         </Switch>

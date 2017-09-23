@@ -1,0 +1,20 @@
+yarn add v1.0.2
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 12 new dependencies.
+├─ airbnb-prop-types@2.8.1
+├─ array.prototype.find@2.0.4
+├─ consolidated-events@1.1.1
+├─ is-touch-device@1.0.1
+├─ moment@2.18.1
+├─ prop-types-exact@1.1.1
+├─ react-addons-shallow-compare@15.6.0
+├─ react-dates@12.6.0
+├─ react-dom@15.6.1
+├─ react-moment-proptypes@1.5.0
+├─ react-portal@3.1.0
+└─ react@15.6.1
+Done in 13.91s.

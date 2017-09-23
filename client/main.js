@@ -4,6 +4,7 @@ import initContext from './configs/context';
 
 // modules
 import coreModule from './modules/core';
+import flightModule from './modules/flight';
 
 // init context
 const context = initContext();
@@ -11,4 +12,5 @@ const context = initContext();
 const app = createApp(context);
 
 app.loadModule(coreModule);
+app.loadModule(flightModule);
 app.init();
