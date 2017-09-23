@@ -5,7 +5,7 @@ import createHistory from 'history/createBrowserHistory';
 import ReactDOM from 'react-dom';
 
 import MainLayout from './components/MainLayout';
-import FlightPage from '../flight/components/FlightPage';
+import FlightPage from '../flight/containers/FlightPage';
 
 export default function (injectDeps) {
   const MainLayoutCtx = injectDeps(MainLayout);

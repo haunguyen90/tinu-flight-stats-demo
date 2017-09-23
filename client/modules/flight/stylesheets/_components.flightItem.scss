@@ -1,0 +1,36 @@
+.flight-item {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #dedddd;
+  border-radius: 2px;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: all .3s ease;
+
+  &:hover{
+    border-color: #1ba0e2;
+  }
+
+  &__column {
+
+  }
+
+  &__label {
+    font-weight: 600;
+  }
+
+  &__flight-number {
+    flex: 1;
+    display: flex;
+    //align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__info {
+    flex: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

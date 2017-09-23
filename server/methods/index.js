@@ -1,5 +1,5 @@
-import accounts from './accounts';
+import flight from './flight';
 
 export default function () {
-  accounts();
+  flight();
 }
