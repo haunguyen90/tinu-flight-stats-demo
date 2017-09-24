@@ -10,9 +10,126 @@ import FlightItem from './FlightItem';
 
 class FlightPage extends React.Component {
   static defaultProps = {
-    scheduledFlights: [{"carrierFsCode":"LH","flightNumber":"419","departureAirportFsCode":"IAD","arrivalAirportFsCode":"FRA","stops":0,"arrivalTerminal":"1","departureTime":"2017-12-12T18:05:00.000","arrivalTime":"2017-12-13T07:50:00.000","flightEquipmentIataCode":"74H","isCodeshare":false,"isWetlease":false,"serviceType":"J","serviceClasses":["F","J","Y"],"trafficRestrictions":[],"codeshares":[{"carrierFsCode":"UA","flightNumber":"8826","serviceType":"J","serviceClasses":["F","J","Y"],"trafficRestrictions":[],"referenceCode":1722616},{"carrierFsCode":"AI","flightNumber":"8644","serviceType":"J","serviceClasses":["J","Y"],"trafficRestrictions":["Q"],"referenceCode":1722629},{"carrierFsCode":"TG","flightNumber":"7711","serviceType":"J","serviceClasses":["F","J","Y"],"trafficRestrictions":["G"],"referenceCode":1722686},{"carrierFsCode":"AC","flightNumber":"9450","serviceType":"J","serviceClasses":["F","J","Y"],"trafficRestrictions":["G"],"referenceCode":1722718}],"referenceCode":"256-1722645--"}],
-    airlines: [{"fs":"AC","iata":"AC","icao":"ACA","name":"Air Canada","phoneNumber":"1-888-422-7533","active":true},{"fs":"AI","iata":"AI","icao":"AIC","name":"Air India","phoneNumber":"1-800-223-7776","active":true},{"fs":"UA","iata":"UA","icao":"UAL","name":"United Airlines","phoneNumber":"1-800-864-8331","active":true},{"fs":"TG","iata":"TG","icao":"THA","name":"Thai Airways International","phoneNumber":"800-426-5204","active":true},{"fs":"LH","iata":"LH","icao":"DLH","name":"Lufthansa","phoneNumber":"800 645-3880","active":true}],
-    airports: [{"fs":"IAD","iata":"IAD","icao":"KIAD","faa":"IAD","name":"Washington Dulles International Airport","street1":"1 Saarinen Circle","city":"Dulles","cityCode":"WAS","stateCode":"VA","postalCode":"20166","countryCode":"US","countryName":"United States","regionName":"North America","timeZoneRegionName":"America/New_York","weatherZone":"DCZ001","localTime":"2017-09-23T17:33:53.169","utcOffsetHours":-4,"latitude":38.95315,"longitude":-77.447735,"elevationFeet":313,"classification":1,"active":true},{"fs":"FRA","iata":"FRA","icao":"EDDF","name":"Frankfurt Airport","city":"Frankfurt","cityCode":"FRA","countryCode":"DE","countryName":"Germany","regionName":"Europe","timeZoneRegionName":"Europe/Berlin","localTime":"2017-09-23T23:33:53.169","utcOffsetHours":2,"latitude":50.048952,"longitude":8.573678,"elevationFeet":381,"classification":1,"active":true}],
+    "scheduledFlights": [
+      {
+        "carrierFsCode": "AA",
+        "flightNumber": "2160",
+        "departureAirportFsCode": "BOS",
+        "arrivalAirportFsCode": "DCA",
+        "stops": 0,
+        "departureTerminal": "B",
+        "arrivalTerminal": "C",
+        "departureTime": "2017-09-25T09:00:00.000",
+        "arrivalTime": "2017-09-25T10:37:00.000",
+        "flightEquipmentIataCode": "319",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [],
+        "referenceCode": "256-581836--"
+      },
+      {
+        "carrierFsCode": "AA",
+        "flightNumber": "2160",
+        "departureAirportFsCode": "DCA",
+        "arrivalAirportFsCode": "BOS",
+        "stops": 0,
+        "departureTerminal": "C",
+        "arrivalTerminal": "B",
+        "departureTime": "2017-09-25T06:30:00.000",
+        "arrivalTime": "2017-09-25T07:54:00.000",
+        "flightEquipmentIataCode": "319",
+        "isCodeshare": false,
+        "isWetlease": false,
+        "serviceType": "J",
+        "serviceClasses": [
+          "R",
+          "J",
+          "Y"
+        ],
+        "trafficRestrictions": [],
+        "codeshares": [],
+        "referenceCode": "256-1001242--"
+      }
+    ],
+    "airlines": [
+      {
+        "fs": "AA",
+        "iata": "AA",
+        "icao": "AAL",
+        "name": "American Airlines",
+        "phoneNumber": "08457-567-567",
+        "active": true
+      }
+    ],
+    "airports": [
+      {
+        "fs": "DCA",
+        "iata": "DCA",
+        "icao": "KDCA",
+        "faa": "DCA",
+        "name": "Ronald Reagan National Airport",
+        "street1": "1 Aviation Circle",
+        "street2": "",
+        "city": "Washington",
+        "cityCode": "WAS",
+        "stateCode": "DC",
+        "postalCode": "20001-6000",
+        "countryCode": "US",
+        "countryName": "United States",
+        "regionName": "North America",
+        "timeZoneRegionName": "America/New_York",
+        "weatherZone": "DCZ001",
+        "localTime": "2017-09-24T03:17:41.148",
+        "utcOffsetHours": -4,
+        "latitude": 38.853434,
+        "longitude": -77.043457,
+        "elevationFeet": 15,
+        "classification": 1,
+        "active": true
+      },
+      {
+        "fs": "BOS",
+        "iata": "BOS",
+        "icao": "KBOS",
+        "faa": "BOS",
+        "name": "Logan International Airport",
+        "street1": "One Harborside Drive",
+        "street2": "",
+        "city": "Boston",
+        "cityCode": "BOS",
+        "stateCode": "MA",
+        "postalCode": "02128-2909",
+        "countryCode": "US",
+        "countryName": "United States",
+        "regionName": "North America",
+        "timeZoneRegionName": "America/New_York",
+        "weatherZone": "MAZ015",
+        "localTime": "2017-09-24T03:17:41.148",
+        "utcOffsetHours": -4,
+        "latitude": 42.36646,
+        "longitude": -71.020176,
+        "elevationFeet": 19,
+        "classification": 1,
+        "active": true
+      }
+    ],
+    "equipments": [
+      {
+        "iata": "319",
+        "name": "Airbus A319",
+        "turboProp": false,
+        "jet": true,
+        "widebody": false,
+        "regional": false
+      }
+    ]
   }
 
   constructor(props) {
@@ -22,7 +139,9 @@ class FlightPage extends React.Component {
       flightDate: moment(),
       focused: false,
       flightNumber: '',
+      flighSelected: [],
     }
+    this.handleSelected = this.handleSelected.bind(this);
   }
 
   onSearchFlight = () => {
@@ -46,6 +165,26 @@ class FlightPage extends React.Component {
     this.setState(() => ({ flightNumber: value.toUpperCase() }));
   }
 
+  handleSelected = (flightNumber) => {
+    const { flighSelected } = this.state;
+    if (flighSelected.indexOf(flightNumber) !== -1) {
+      flighSelected.splice(flighSelected.indexOf(flightNumber), 1);
+    } else {
+      flighSelected.push(flightNumber);
+    }
+    this.setState({ flighSelected });
+    this.checkAll.checked = false;
+  }
+  selectAll = (e) => {
+    let { flighSelected } = this.state;
+    if (e.target.checked) {
+      const { scheduledFlights } = this.props;
+      flighSelected = scheduledFlights.map(item => (item.referenceCode));
+    } else {
+      flighSelected = [];
+    }
+    this.setState({ flighSelected });
+  }
   render() {
     return (
       <div className="main-page main-page--flight">
@@ -90,16 +229,31 @@ class FlightPage extends React.Component {
             >Search Flight</button>
           </div>
         </div>
-
+        <div className="summary-section">
+          <label htmlFor="checkbox" className="summary-section__check-all">
+            <input type="checkbox" ref={el => (this.checkAll = el)} onChange={this.selectAll} />
+            All
+          </label>
+          <span className="summary-section__divide">
+            |
+          </span>
+          <span className="summary-section__count">
+            <label htmlFor="selected">Selected: {this.state.flighSelected.length}</label>
+          </span>
+        </div>
         <div className="result-section">
-          {this.props.scheduledFlights.map((flightData, index) => (
-            <FlightItem
-              key={index}
-              flightData={flightData}
-              airlines={this.props.airlines}
-              airports={this.props.airports}
-            />
-          ))}
+          {this.props.scheduledFlights.map((flightData, index) => {
+            return (
+              <FlightItem
+                key={index}
+                flightData={flightData}
+                airlines={this.props.airlines}
+                airports={this.props.airports}
+                handleSelected={this.handleSelected}
+                isChecked={(this.state.flighSelected.indexOf(flightData.referenceCode) !== -1)}
+              />
+            )
+          })}
         </div>
       </div>
     )

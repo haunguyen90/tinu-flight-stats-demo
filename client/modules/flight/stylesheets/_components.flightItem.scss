@@ -14,7 +14,10 @@
   &__column {
 
   }
-
+  &__title {
+    font-size: 17px;
+    color: #05b5ab;
+  }
   &__label {
     font-weight: 600;
   }
@@ -25,6 +28,9 @@
     //align-items: center;
     justify-content: flex-start;
   }
+  &__flight-selection {
+    padding-right: 10px
+  }
 
   &__info {
     flex: 2;
@@ -32,5 +38,23 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+  }
+}
+
+.summary-section {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  &__check-all {
+    padding-right: 15px;
+    font-weight: bold;
+    input {
+      margin-right: 15px;
+    }
+  }
+  &__divide {
+    margin-right: 15px;
+  }
+  &__count {
+    font-weight: bold;
   }
 }
