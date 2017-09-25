@@ -2,7 +2,7 @@
 
 ## Dependencies
  - yarn
- - Meteor
+ - Meteor - Mantra
  - React
  - React-router 4
  - ESlint airbnb & meteor
