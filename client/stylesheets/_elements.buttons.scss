@@ -10,3 +10,16 @@
     width: 100%;
   }
 }
+
+.btn-primary-selected {
+  color: #06b5ab;
+  background-color: white;
+  &:hover, &:focus, &:focus:active {
+    color: #06b5ab;
+    background-color: white;
+    outline: none;
+    border-color: #06b5ab;
+    box-shadow: none;
+    cursor: unset;
+  }
+}
