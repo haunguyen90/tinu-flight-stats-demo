@@ -3,12 +3,13 @@ export default {
     LocalState.set('FLIGHT_ERROR', null);
   },
 
-  searchFlight({ Meteor, LocalState }, flightDate, flightNumber) {
+  searchFlight({ Meteor, LocalState }, flightDate, flightNumber, callback) {
     Meteor.call('searchFlightServer', flightDate, flightNumber, (err, result) => {
       if (err) {
         LocalState.set('FLIGHT_ERROR', err);
       } else {
         if (result.statusCode === 200) {
+          callback(true);
           if (result.data && result.data.scheduledFlights) {
             LocalState.set('SCHEDULED_FLIGHTS', result.data.scheduledFlights);
           }

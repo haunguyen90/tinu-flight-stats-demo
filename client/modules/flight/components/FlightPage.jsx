@@ -20,6 +20,7 @@ class FlightPage extends React.Component {
       focused: false,
       flightNumber: '',
       flighSelected: [],
+      isSearching: false,
     }
     this.handleSelected = this.handleSelected.bind(this);
   }
@@ -27,9 +28,11 @@ class FlightPage extends React.Component {
   onSearchFlight = () => {
     const { searchFlight } = this.props;
     const { flightDate, flightNumber } = this.state;
-
-    searchFlight(flightDate.format('DD MMM YYYY'), flightNumber);
-    this.setState({ flighSelected: [] });
+    this.setState({ isSearching: true });
+    searchFlight(flightDate.format('DD MMM YYYY'), flightNumber, () => {
+      this.setState({ isSearching: false });
+      this.setState({ flighSelected: [] });
+    });
   }
 
   onFlightNumberChange = (event) => {
@@ -121,7 +124,13 @@ class FlightPage extends React.Component {
           </div>
 
           <div className="zigvy-form-group zigvy-form-group--inline">
-            <button className="btn btn-primary" onClick={this.onSearchFlight} >Search Flight</button>
+            {
+              this.state.isSearching
+              ?
+              <button className="btn btn-primary" ><i className="fa fa-circle-o-notch fa-spin" /> Searching</button>
+              :
+              <button className="btn btn-primary" onClick={this.onSearchFlight} >Search Flight</button>
+            }
           </div>
         </div>
         <div className="result-section">
@@ -129,26 +138,26 @@ class FlightPage extends React.Component {
             <FlightHeaderList isReturn={this.isBiBirectional()} />
             <div className="result-section__body">
               {
-                !this.isBiBirectional()
-                ?
-                  this.props.scheduledFlights.map((flightData, index) => (
-                    <FlightItem
-                      key={index}
-                      flightData={flightData}
-                      airlines={this.props.airlines}
-                      airports={this.props.airports}
-                      handleSelected={this.handleSelected}
+                this.props.scheduledFlights.length !== 0 ?
+                  !this.isBiBirectional() ?
+                    this.props.scheduledFlights.map((flightData, index) => (
+                      <FlightItem
+                        key={index}
+                        flightData={flightData}
+                        airlines={this.props.airlines}
+                        airports={this.props.airports}
+                        handleSelected={this.handleSelected}
+                        getAirportName={this.getAirportName}
+                        isChecked={!!findWhere(this.state.flighSelected, { referenceCode: flightData.referenceCode })}
+                      />
+                    )) :
+                    <FlightReturn
+                      scheduledFlights={this.props.scheduledFlights}
                       getAirportName={this.getAirportName}
-                      isChecked={!!findWhere(this.state.flighSelected, { referenceCode: flightData.referenceCode })}
-                    />
-                  ))
-                :
-                  <FlightReturn
-                    scheduledFlights={this.props.scheduledFlights}
-                    getAirportName={this.getAirportName}
-                    handleSelected={this.handleSelected}
-                    isChecked={!!findWhere(this.state.flighSelected, { isReturn: true })}
-                  />
+                      handleSelected={this.handleSelected}
+                      isChecked={!!findWhere(this.state.flighSelected, { isReturn: true })}
+                    /> :
+                    <div className="no-data-showing">NO DATA</div>
               }
             </div>
           </div>
@@ -157,7 +166,7 @@ class FlightPage extends React.Component {
             ?
               <div className="result-section__summary">
                 <div className="result-section__summary__title">
-                  <span>Booked Summary</span>
+                  <span>Booking Summary</span>
                 </div>
                 <FlightSummary flighSelected={this.state.flighSelected} getAirportName={this.getAirportName} />
               </div>

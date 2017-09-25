@@ -10,7 +10,7 @@ export const composer = ({ context, clearErrors }, onData) => {
   const airlines = LocalState.get('AIRLINES') || FlightDataExample.airlines;
   const airports = LocalState.get('AIRPORT') || FlightDataExample.airports;
   const equipments = LocalState.get('EQUIPMENTS') || FlightDataExample.equipments;
-  let scheduledFlights = LocalState.get('SCHEDULED_FLIGHTS') || FlightDataExample.scheduledFlights;
+  let scheduledFlights = LocalState.get('SCHEDULED_FLIGHTS') || [];
 
   if (scheduledFlights) {
     scheduledFlights.map((item) => {
