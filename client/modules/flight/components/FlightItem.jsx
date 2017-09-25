@@ -35,6 +35,7 @@ const FlightItem = ({ flightData, handleSelected, getAirportName, isChecked }) =
       <div className="flight-item__column flight-item__info flight-item__info--depart">
         <div className="flight-item__info__time">
           <span>{flightData.departureTime.format('HH:mm')}</span>
+          <i className="fa fa-plane" aria-hidden="true"></i>
         </div>
         <div className="flight-item__info__date">
           <span>{flightData.departureTime.format('DD MMM YYYY')}</span>
