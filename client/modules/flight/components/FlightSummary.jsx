@@ -10,18 +10,7 @@ const submitFlight = (quantity) => {
 const FlightSummary = ({ flighSelected, getAirportName }) => {
 
   return (
-    <div className="summary-section">
-      {
-        flighSelected.map((flightData, index) => (
-          <div key={index} className="summary-section__row">
-            <span className="summary-section__item">
-              <label className="summary-section__item__label">Flight:</label>
-              {
-                flightData.codeshares.length > 0
-                ?
-                <span>{generateCodeShare(flightData.codeshares)} Operated as {flightData.carrierFsCode}{flightData.flightNumber}</span>
-                :
-                <span>{flightData.carrierFsCode}{flightData.flightNumber}</span>
+  flightData.carrierFsCode}{flightData.flightNumber}</span>
               }
 
             </span>

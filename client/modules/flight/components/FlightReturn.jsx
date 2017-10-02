@@ -7,18 +7,7 @@ const FlightReturn = ({ scheduledFlights, handleSelected, getAirportName, isChec
 
   const onChangeSelect = (el) => {
     if (!document.querySelector('input[name="flight-radio"]:checked')) {
-      alert('please select at least a option');
-      return false;
-    }
-    const referenceCode = document.querySelector('input[name="flight-radio"]:checked').value;
-    const flighSelected = findWhere(scheduledFlights, { referenceCode });
-    flighSelected.isReturn = true;
-    handleSelected(flighSelected);
-  }
-
-  each(scheduledFlights, (item) => {
-    getCodeShare = union(getCodeShare, item.codeshares);
-  });
+    sdsdfsdsd
 
   const getDurationTime = (departure, arrival) => {
     const duration = departure.diff(arrival);

@@ -35,16 +35,7 @@ class FlightPage extends React.Component {
     });
   }
 
-  onFlightNumberChange = (event) => {
-    event.preventDefault();
-
-    let value = event.currentTarget.value;
-    if (value.length > 2) {
-      value = value.replace(/^.{2}(.*)/, (match, p1) => {
-        const newString = match.replace(p1, '');
-        const flight = parseInt(p1);
-        return newString + flight;
-      });
+  onFlighadsdas
     }
     this.setState(() => ({ flightNumber: value.toUpperCase() }));
   }

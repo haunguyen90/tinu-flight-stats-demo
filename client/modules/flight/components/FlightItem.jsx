@@ -9,13 +9,6 @@ const FlightItem = ({ flightData, handleSelected, getAirportName, isChecked }) =
     handleSelected(flightData);
   }
 
-  const getDurationTime = (departure, arrival) => {
-    const duration = departure.diff(arrival);
-    const d = moment.duration(duration, 'milliseconds');
-    const hours = Math.floor(d.asHours());
-    const mins = Math.floor(d.asMinutes()) - (hours * 60);
-    return `${hours}h ${mins}m`;
-  }
 
   return (
     <div className="flight-item">
