@@ -41,7 +41,7 @@ class FlightPage extends React.Component {
   }
 
   testFunction = () => {
-    // TODO
+    let { flighSelected } = this.state;
     const abc = 10;
     const def = 20;
     console.log(abc + def);
@@ -49,6 +49,10 @@ class FlightPage extends React.Component {
       this.setState({ isSearching: false });
       this.setState({ flighSelected: [] });
     });
+
+      return matchedAirport.name;
+    }
+    return 'Not Found';
 
   }
 
