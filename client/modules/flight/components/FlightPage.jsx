@@ -42,6 +42,14 @@ class FlightPage extends React.Component {
 
   testFunction = () => {
     // TODO
+    const abc = 10;
+    const def = 20;
+    console.log(abc + def);
+    searchFlight(flightDate.format('DD MMM YYYY'), flightNumber, () => {
+      this.setState({ isSearching: false });
+      this.setState({ flighSelected: [] });
+    });
+
   }
 
   getAirportName = (airportCode) => {
