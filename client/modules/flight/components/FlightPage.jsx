@@ -40,10 +40,8 @@ class FlightPage extends React.Component {
     this.setState(() => ({ flightNumber: value.toUpperCase() }));
   }
 
-  handleSelected = (flightData) => {
-    const { flighSelected } = this.state;
-    flighSelected.push(flightData);
-    this.setState({ flighSelected });
+  testFunction = () => {
+    // TODO
   }
 
   getAirportName = (airportCode) => {
